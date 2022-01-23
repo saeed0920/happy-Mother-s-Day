@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
+body {
+  background: linear-gradient(to right bottom, #eecda3, #ef629f) no-repeat;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Sedgwick Ave", cursive;
+}
+html {
+  font-size: 62.5%;
+}
+
+section {
+  text-align: center;
+
+  & > * {
+    color: transparent;
+    backface-visibility: hidden;
+  }
+  h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(to right, #6a3093, #a044ff);
+    -webkit-background-clip: text;
+    animation: left-to-right 1.5s;
+  }
+  h2 {
+    font-size: 4.5rem;
+    font-family: "HomaRegular";
+    background: linear-gradient(to right, #005c97, #363795);
+    -webkit-background-clip: text;
+    animation: right-to-left 1.5s;
+  }
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: cursive;
+}
+@keyframes right-to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.img {
+  overflow: hidden;
+  width: 40rem;
+  border-radius: 2rem;
+  transform: rotate(90deg);
+  box-shadow: 0 2rem 4rem rgba(black, 0.15);
+}
