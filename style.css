@@ -33,11 +33,17 @@ section > * {
 section h1 {
   font-size: 4rem;
   padding-bottom: 2rem;
+  -webkit-animation: left-to-right 1.5s;
+          animation: left-to-right 1.5s;
   background: -webkit-gradient(linear, left top, right top, from(#6a3093), to(#a044ff));
   background: linear-gradient(to right, #6a3093, #a044ff);
   -webkit-background-clip: text;
-  -webkit-animation: left-to-right 1.5s;
-          animation: left-to-right 1.5s;
+}
+
+@media only screen and (max-width: 22.7em) {
+  section h1 {
+    font-size: 3.5rem;
+  }
 }
 
 section h2 {
@@ -48,6 +54,14 @@ section h2 {
   -webkit-background-clip: text;
   -webkit-animation: right-to-left 1.5s;
           animation: right-to-left 1.5s;
+  -webkit-animation: cl 5s infinite;
+          animation: cl 5s infinite;
+}
+
+@media only screen and (max-width: 22.7em) {
+  section h2 {
+    font-size: 3.5rem;
+  }
 }
 
 p {
@@ -116,5 +130,87 @@ p {
           transform: rotate(90deg);
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+@-webkit-keyframes color {
+  25% {
+    background: -webkit-gradient(linear, left top, right top, from(#005c97), to(#363795));
+    background: linear-gradient(to right, #005c97, #363795);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, right top, from(#0cebeb), color-stop(#20e3b2), to(#29ffc6));
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: -webkit-gradient(linear, left top, right top, from(#06beb6), to(#48b1bf));
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, from(#642b73), to(#c6426e));
+    background: linear-gradient(to right, #642b73, #c6426e);
+    -webkit-background-clip: text;
+  }
+}
+
+@keyframes color {
+  25% {
+    background: -webkit-gradient(linear, left top, right top, from(#005c97), to(#363795));
+    background: linear-gradient(to right, #005c97, #363795);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, right top, from(#0cebeb), color-stop(#20e3b2), to(#29ffc6));
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: -webkit-gradient(linear, left top, right top, from(#06beb6), to(#48b1bf));
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right top, from(#642b73), to(#c6426e));
+    background: linear-gradient(to right, #642b73, #c6426e);
+    -webkit-background-clip: text;
+  }
+}
+
+@-webkit-keyframes cl {
+  0% {
+    color: blue;
+  }
+  10% {
+    color: #8e44ad;
+  }
+  20% {
+    color: #1abc9c;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #34495e;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
 }
 /*# sourceMappingURL=style.css.map */
